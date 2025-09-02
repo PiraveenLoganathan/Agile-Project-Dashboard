@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #2c3e50;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #c41e3a;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.top-section, .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #c41e3a;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c41e3a;
+}
+
+.btn {
+    background: #c41e3a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #a01729;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.list-container {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.list-container .item {
+    background: #f8f9fa;
+    border-left: 4px solid #c41e3a;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.list-container .item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.kpi-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 5px solid #c41e3a;
+}
+
+.kpi-value {
+    font-size: 2em;
+    font-weight: 700;
+    color: #c41e3a;
+}
+
+.kpi-label {
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
