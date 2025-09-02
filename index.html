@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Project Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <header>
+            <h1>Agile Project Dashboard</h1>
+        </header>
+
+        <!-- Top section: Stakeholders and User Stories -->
+        <div class="top-section">
+            <!-- Stakeholder Management -->
+            <div class="section">
+                <h2>Stakeholder Management</h2>
+                <div class="form-group">
+                    <label for="stakeholderName">Name</label>
+                    <input type="text" id="stakeholderName" placeholder="e.g., Sarah Johnson">
+                </div>
+                <div class="form-group">
+                    <label for="stakeholderRole">Role</label>
+                    <select id="stakeholderRole">
+                        <option value="">Select Role</option>
+                        <option value="Product Owner">Product Owner</option>
+                        <option value="Scrum Master">Scrum Master</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Business Analyst">Business Analyst</option>
+                        <option value="UX Designer">UX Designer</option>
+                        <option value="Client">Client</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stakeholderInfluence">Influence Level</label>
+                    <select id="stakeholderInfluence">
+                        <option value="">Select Level</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <button class="btn" id="addStakeholderBtn">Add Stakeholder</button>
+
+                <div id="stakeholderList" class="list-container"></div>
+            </div>
+
+            <!-- User Story Management -->
+            <div class="section">
+                <h2>User Story Management</h2>
+                <div class="form-group">
+                    <label for="storyTitle">Story Title</label>
+                    <input type="text" id="storyTitle" placeholder="e.g., Quick Balance View">
+                </div>
+                <div class="form-group">
+                    <label for="storyDescription">User Story</label>
+                    <textarea id="storyDescription" rows="3" placeholder="As a [user], I want [goal] so that [benefit]"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="storyPriority">Priority</label>
+                    <select id="storyPriority">
+                        <option value="">Select Priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="storyPoints">Story Points</label>
+                    <select id="storyPoints">
+                        <option value="">Select Points</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="8">8</option>
+                        <option value="13">13</option>
+                    </select>
+                </div>
+                <button class="btn" id="addUserStoryBtn">Add User Story</button>
+
+                <div id="storyList" class="list-container"></div>
+            </div>
+        </div>
+
+        <!-- Bottom section: KPIs and Backlog -->
+        <div class="bottom-section">
+            <!-- Project KPIs -->
+            <div class="section">
+                <h2>Project KPIs & Metrics</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="totalStories">0</div>
+                        <div class="kpi-label">Total Stories</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="completedStories">0</div>
+                        <div class="kpi-label">Completed</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="totalPoints">0</div>
+                        <div class="kpi-label">Total Points</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="completionRate">0%</div>
+                        <div class="kpi-label">Completion Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prioritized Backlog -->
+            <div class="section">
+                <h2>Prioritized Backlog</h2>
+                <p>Click on stories to toggle status</p>
+                <div id="backlogList" class="list-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
